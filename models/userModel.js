@@ -1,10 +1,7 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    userId : {
-        type: String,
-        required : true
-    },
+
     userName : {
         type : String,
         required : true
@@ -20,8 +17,8 @@ const userSchema = new mongoose.Schema({
     bookedFlights : [
         {
             flightId : Number,
-            sestNo : Number,
-            bookingTime : ISODate
+            seatNo : Number,
+            bookingTime : Date
         }
     ]
 },
@@ -30,4 +27,4 @@ const userSchema = new mongoose.Schema({
     }
 )
 
-module.exports = mongoose.models('users',userSchema)
+module.exports = mongoose.model('users',userSchema)

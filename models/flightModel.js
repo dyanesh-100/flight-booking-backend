@@ -15,11 +15,11 @@ const flightSchema =new mongoose.Schema({
     },
     
     arrivalTime:{
-        type : ISODate,
+        type : Date
              
     },
     departureTime:{
-        type : ISODate
+        type : Date
     },
     
     departureAirport : {
